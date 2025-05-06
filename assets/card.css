@@ -11,7 +11,6 @@ body .bottom_bar{
 
 #rzecz {
     margin-top: 20px;
-    display: flex;
     align-items: center;
 }
 #rzecz p{
