@@ -96,16 +96,17 @@ if (sex === "m"){
 }
 
 setData("name", "DAWID");
-setData("surname", "BIELSKI");
-setData("nationality", "POLSKA");
-setData("birthday", "18.09.2007");
-setData("familyName", "Bielski");
-setData("sex", "Mężczyzna");
-setData("fathersFamilyName", "Bielskii");
-setData("mothersFamilyName", "Nowak");
-setData("birthPlace", "Gdańsk");
-setData("countryOfBirth", "Polska");
-setData("adress", "ul. tęczowa 21<br>53-602 Gdańsk");
+setData("name", data['name'].toUpperCase());
+setData("surname", data['surname'].toUpperCase());
+setData("nationality", data['nationality'].toUpperCase());
+setData("birthday", birthday);
+setData("familyName", data['familyName']);
+setData("sex", sex);
+setData("fathersFamilyName", data['fathersFamilyName']);
+setData("mothersFamilyName", data['mothersFamilyName']);
+setData("birthPlace", data['birthPlace']);
+setData("countryOfBirth", data['countryOfBirth']);
+setData("adress", "ul. " + data['adress1'] + "<br>" + data['adress2'] + " " + data['city']);
 
 // Zdjęcie – Twoje zdjęcie z Imgur
 document.querySelector(".id_own_image").style.backgroundImage = "url('https://i.imgur.com/RnepkmT.jpeg')";
@@ -156,4 +157,5 @@ function setData(id, value){
 function getRandom(min, max) {
   return parseInt(Math.random() * (max - min) + min);
 }
+
 
